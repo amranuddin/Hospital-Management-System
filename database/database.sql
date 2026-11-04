@@ -10,6 +10,7 @@ CREATE TABLE patient (
     blood_group VARCHAR(10),
     symptoms VARCHAR(500)
 );
+
 CREATE TABLE doctor (
     doctor_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
