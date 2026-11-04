@@ -55,6 +55,5 @@ CREATE TABLE bill (
     total_amount DECIMAL(10,2) DEFAULT 0,
     payment_status VARCHAR(30) DEFAULT 'Unpaid',
     payment_date DATE,
-    FOREIGN KEY (patient_id)
-        REFERENCES patient(patient_id)
+    FOREIGN KEY (patient_id)  REFERENCES patient(patient_id)
 );
