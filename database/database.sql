@@ -35,12 +35,6 @@ CREATE TABLE appointment (
     FOREIGN KEY (doctor_id)    REFERENCES doctor(doctor_id)
 );
 
-CREATE TABLE bed (
-    bed_id INT PRIMARY KEY AUTO_INCREMENT,
-    bed_number VARCHAR(20),
-    room_number VARCHAR(20),
-    status VARCHAR(30) DEFAULT 'Available'
-);
 
 CREATE TABLE staff_member (
     staff_id INT PRIMARY KEY AUTO_INCREMENT,
