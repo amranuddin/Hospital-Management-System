@@ -35,7 +35,6 @@ CREATE TABLE appointment (
     FOREIGN KEY (doctor_id)    REFERENCES doctor(doctor_id)
 );
 
-
 CREATE TABLE staff_member (
     staff_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
