@@ -41,6 +41,7 @@ CREATE TABLE bed (
     status VARCHAR(30) DEFAULT 'Available'
 );
 
+
 CREATE TABLE staff_member (
     staff_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100),
