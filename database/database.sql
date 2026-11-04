@@ -20,6 +20,7 @@ CREATE TABLE doctor (
     chamber_no VARCHAR(20),
     consultation_fee DECIMAL(10,2)
 );
+
 CREATE TABLE appointment (
     appointment_id INT PRIMARY KEY AUTO_INCREMENT,
     patient_id INT NOT NULL,
@@ -28,10 +29,8 @@ CREATE TABLE appointment (
     appointment_time TIME,
     reason VARCHAR(255),
     status VARCHAR(30) DEFAULT 'Scheduled',
-    FOREIGN KEY (patient_id)
-        REFERENCES patient(patient_id),
-    FOREIGN KEY (doctor_id)
-        REFERENCES doctor(doctor_id)
+    FOREIGN KEY (patient_id)  REFERENCES patient(patient_id),
+    FOREIGN KEY (doctor_id)    REFERENCES doctor(doctor_id)
 );
 CREATE TABLE bed (
     bed_id INT PRIMARY KEY AUTO_INCREMENT,
