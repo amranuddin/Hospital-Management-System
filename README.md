@@ -1,62 +1,104 @@
-# <p align="center" style="color:#007acc; font-family:sans-serif;">🏥 Hospital Management Mini System (OOP and DBMS Academic Project)</p>
+# 🏥 Hospital Management Mini System (OOP & DBMS Academic Project)
 
 <p align="center">
-  👉 <strong>Live Demo Website:</strong> <a href="https://hms-kitten-5b6d93.netlify.app/">https://hms-kitten-5b6d93.netlifyapp/</a>
+  👉 **Live Demo Website:** [https://hms-kitten-5b6d93.netlify.app/](https://hms-kitten-5b6d93.netlify.app/)
 </p>
 
-An interactive, web-hosted **Hospital Management Mini System** designed to streamline core healthcare administrative workflows. Developed as an academic project, this system implements **Object-Oriented Programming (OOP)** principles and follows the industry-standard **Model-View-Controller (MVC)** architectural design pattern.
+An interactive **Hospital Management Mini System** developed as an academic project to streamline essential healthcare administrative workflows. The system combines **Object-Oriented Programming (OOP)** principles with **Database Management System (DBMS)** concepts and follows the **Model-View-Controller (MVC)** architectural design pattern.
+
+The project provides a structured solution for managing patient records, doctor information, and appointment scheduling, with database integration for persistent data storage and retrieval.
 
 ---
 
-  
-## <span style="color:#ff5722;">🛠️ OOP Implementation in This Project</span>
+## 🛠️ OOP Implementation in This Project
 
-This project serves as a practical demonstration of the four core pillars of Object-Oriented Programming:
+This project demonstrates the four fundamental pillars of Object-Oriented Programming:
 
-1. **Encapsulation:** 
-   * Patient and Doctor data attributes are set to `private` (e.g., `private String name`) to restrict unauthorized access. 
-   * Safe data access and modifications are strictly governed via public **Getter** methods.
+### 1. Encapsulation
+- Patient and Doctor attributes are declared as `private` (e.g., `private String name`).
+- Data access and modification are controlled through public getter and setter methods.
+- Protects object data from unauthorized direct access.
 
-2. **Inheritance:** 
-   * The main UI controller class extends Java's built-in framework (`public class Project extends JFrame`), inheriting window creation and layout capabilities.
+### 2. Inheritance
+- The main UI controller class extends Java's built-in Swing framework: `public class Project extends JFrame`.
+- Inherits window management and GUI functionalities from the `JFrame` class.
 
-3. **Polymorphism:** 
-   * Method Overriding is implemented by custom-defining the standard `toString()` method in the `Patient` and `Doctor` models. This allows dynamic and structured data display inside selection dropdowns (`JComboBox`).
+### 3. Polymorphism
+- Method overriding is implemented by redefining the standard `toString()` method in the `Patient` and `Doctor` model classes.
+- Enables dynamic and meaningful object representation inside selection components such as `JComboBox`.
 
-4. **Abstraction:** 
-   * The visual interface (View Layer) remains completely isolated from the business logic processing. The UI simply calls high-level abstract logic like `system.addPatient(...)` without worrying about how data is mapped or maintained in memory.
+### 4. Abstraction
+- Separates user interface operations from internal business logic.
+- The View interacts with high-level system methods without needing to understand the underlying data processing and database operations.
 
 ---
 
-
-## <span style="color:#2196f3;">🎯 Core Feature Modules</span>
+## 🎯 Core Feature Modules
 
 ### 1. Patient Registration Module
-* **Data Collection:** Registers patient details including Name, Age, and active Medical Symptoms/Diseases.
-* **Input Validation:** Built-in exception handling (capturing `NumberFormatException`) prevents empty submissions and ensures proper numeric age format.
-* **Live Directory Sync:** Newly registered patient records instantly update the data grid table (`JTable`) and update the appointment selection dropdowns dynamically.
+- **Data Collection:** Registers patient information, including name, age, and medical symptoms or diseases.
+- **Input Validation:** Uses exception handling, including `NumberFormatException`, to validate numeric age input.
+- **Database Integration:** Stores patient information in the database for persistent record management.
+- **Live Directory Sync:** Updates the patient directory and appointment selection components after successful registration.
 
 ### 2. Doctor Appointment Scheduler
-* **Dynamic Dependency Sync:** Automatically fetches registered patients from memory to ensure appointments are only booked for registered individuals.
-* **Consultant Portfolio:** Pre-loaded medical doctor profiles categorized by specialties (Cardiologist, Pediatrician, Neurologist) and chamber room numbers.
-* **Digital Confirmation Voucher:** Generates an instant, professional appointment confirmation slip using modal dialogues upon submission.
+- **Dynamic Patient Selection:** Retrieves registered patient records to ensure appointments are associated with existing patients.
+- **Doctor Portfolio:** Provides doctor profiles categorized by medical specialties, including Cardiologist, Pediatrician, and Neurologist, along with chamber room information.
+- **Appointment Management:** Facilitates appointment scheduling by connecting patient and doctor information.
+- **Digital Confirmation Voucher:** Generates an appointment confirmation slip through a modal dialogue after successful submission.
+
+### 3. Database Management Module
+- **Persistent Data Storage:** Stores application records in a database instead of relying solely on temporary runtime memory.
+- **Data Retrieval:** Retrieves previously stored records when required.
+- **Data Consistency:** Maintains structured relationships between application entities.
+- **DBMS Integration:** Demonstrates practical database operations for managing hospital information.
 
 ---
 
-## <span style="color:#4caf50;">🏗️ Architectural Pattern (MVC)</span>
+## 🏗️ Architectural Pattern (MVC)
 
-The codebase strictly adheres to the **Separation of Concerns (SoC)** principle:
-* **Model (`Patient`, `Doctor`):** Blueprints holding state parameters and getter interfaces. They have zero dependencies on the GUI libraries.
-* **Controller/Core Engine (`HospitalSystem`):** Handles runtime state memory utilizing dynamic `ArrayList` collections.
-* **View Driver (`Project` / UI Component):** Orchestrates structural element placement using nested layout managers to ensure display stability.
+The application follows the **Model-View-Controller (MVC)** architectural pattern and the Separation of Concerns (SoC) principle.
 
----
-
-## <span style="color:#9c27b0;">⚙️ Technical Specifications</span>
-
-* **Design Pattern:** Model-View-Controller (MVC) & OOP
-* **Data Structures:** Dynamic Safe Collections (`ArrayList<E>`)
-* **Deployment:** Hosted live on Netlify
+- **Model (`Patient`, `Doctor`):** Represents the application's data entities and provides controlled access to their attributes.
+- **Controller/Core Engine (`HospitalSystem`):** Manages application operations, business logic, and interactions between the View and data layer.
+- **View (`Project` / UI Components):** Handles the graphical user interface using Java Swing components and layout managers.
+- **Database Layer:** Responsible for storing, retrieving, and managing application data through database operations.
 
 ---
 
+## 🗄️ Database Integration (DBMS)
+
+Database integration has been added to make the system more reliable and capable of maintaining records beyond a single application session.
+
+Key database capabilities include:
+
+- Storing and retrieving patient records.
+- Managing doctor information.
+- Maintaining appointment-related information.
+- Supporting persistent data management.
+- Connecting application operations with the database.
+
+---
+
+## ⚙️ Technical Specifications
+
+| Category | Technology / Concept |
+|---|---|
+| Programming Language | Java |
+| GUI Framework | Java Swing |
+| OOP Concepts | Encapsulation, Inheritance, Polymorphism, Abstraction |
+| Architecture | Model-View-Controller (MVC) |
+| Data Structures | ArrayList |
+| Database | Database Integration (DBMS) |
+| Exception Handling | Java Exception Handling |
+| Deployment | Netlify |
+
+---
+
+## 🎓 Project Objectives
+
+- Apply fundamental OOP concepts in a real-world-inspired application.
+- Understand MVC architecture and separation of concerns.
+- Implement database connectivity and persistent data storage.
+- Practice CRUD-oriented data management.
+- Develop an interactive desktop-based hospital management solution.
