@@ -1,3 +1,4 @@
+-- Active: 1777530565774@@127.0.0.1@3306@mysql
 CREATE DATABASE IF NOT EXISTS hospital_management;
 
 USE hospital_management;
