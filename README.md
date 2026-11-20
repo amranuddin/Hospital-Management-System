@@ -1,4 +1,4 @@
-# <p align="center" style="color:#007acc; font-family:sans-serif;">🏥 Hospital Management Mini System (OOP Academic Project)</p>
+# <p align="center" style="color:#007acc; font-family:sans-serif;">🏥 Hospital Management Mini System (OOP and DBMS Academic Project)</p>
 
 <p align="center">
   👉 <strong>Live Demo Website:</strong> <a href="https://hms-kitten-5b6d93.netlify.app/">https://hms-kitten-5b6d93.netlifyapp/</a>
